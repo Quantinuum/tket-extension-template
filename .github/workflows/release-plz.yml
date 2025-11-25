@@ -4,7 +4,10 @@ name: 🦀 Release-plz
 on:
   push:
     branches:
-      - main
+      - disabled-release-plz-REMOVE-ME
+      # Uncomment this to have release-plz generate changelogs for the rust crate
+      # automatically, bumping the crate version and handling publishing to crates.io.
+      #- main
 
 jobs:
   release-plz-pr:

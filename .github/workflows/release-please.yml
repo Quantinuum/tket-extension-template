@@ -5,8 +5,11 @@ on:
   workflow_dispatch: {}
   push:
     branches:
-      - main
-      - release/*
+      - disabled-release-please-REMOVE-ME
+      # Uncomment these to have release-please generate changelogs for the python package
+      # automatically, bumping the package version and handling publishing to PyPI.
+      #- main
+      #- release/*
 
 permissions:
   contents: write

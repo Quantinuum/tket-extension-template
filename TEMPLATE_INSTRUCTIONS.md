@@ -51,6 +51,15 @@ The CI should take care of uploading the coverage report to codecov.io.
 Setup a [codspeed.io](https://codspeed.io) project and add a `CODSPEED_TOKEN` secret to the repository.
 The CI should take care of uploading the benchmark results to codspeed.io.
 
+#### Release automation
+
+You can let automation handle the CHANGELOG generation, version bumping, and package publishing for you (for both Rust and Python libraries).
+
+Re-enable the triggers in [`release-plz.yml`](.github/workflows/release-plz.yml)
+and [`release-please.yml`](.github/workflows/release-please.yml) if you want to
+use it. You'll need to create the library in crates.io or PyPI initially before
+the automation can push to them.
+
 ## Structure of the repository
 
 The repository is a workspace with two members:
