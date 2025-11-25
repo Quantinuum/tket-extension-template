@@ -1,0 +1,27 @@
+[package]
+name = "rust-bindings"
+description = "A rust crate exposing bindings to the Python side. This library is not meant to be published."
+version = "0.1.0"
+publish = false
+edition = { workspace = true }
+rust-version = { workspace = true }
+
+[lints]
+workspace = true
+
+[lib]
+name = "rust_bindings"
+crate-type = ["cdylib", "rlib"]
+path = "rust-bindings/lib.rs"
+# This library requires a Python runtime to be tested.
+# It is tested by the py tests in the `tests` directory.
+doc = false
+test = false
+bench = false
+
+[dependencies]
+tket-extension-template = { version = "0.0.0", path = "../rust" }
+
+derive_more = { workspace = true, features = ["display", "from"] }
+pyo3 = { workspace = true, features = ["extension-module", "abi3-py310"] }
+tket = { workspace = true }

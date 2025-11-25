@@ -1,0 +1,23 @@
+[package]
+name = "tket-extension-template"
+version = "0.0.0"
+
+readme = "README.md"
+documentation = "https://docs.rs/tket-extension-template"
+description = "A TKET extension"
+keywords = ["Quantum", "Quantinuum", "tket"]
+categories = ["compilers"]
+
+edition = { workspace = true }
+rust-version = { workspace = true }
+homepage = { workspace = true }
+repository = { workspace = true }
+license = { workspace = true }
+
+[lints]
+workspace = true
+
+[dependencies]
+derive_more = { workspace = true, features = ["display", "error", "from"] }
+itertools = { workspace = true }
+tket = { workspace = true }

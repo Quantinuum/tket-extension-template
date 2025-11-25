@@ -1,0 +1,51 @@
+[project]
+name = "tket-extension-template"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "A TKET extension"
+license = { file = "LICENCE" }
+readme = "README.md"
+authors = [
+    #{ name = "Your Name", email = "your.name@quantinuum.com" },
+]
+maintainers = [
+    #{ name = "Your Name", email = "your.name@quantinuum.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+
+dependencies = ["hugr~=0.14.3", "tket~=0.12.12"]
+
+[project.urls]
+homepage = "https://github.com/CQCL/tket-extension-template/tree/main/python"
+repository = "https://github.com/CQCL/tket-extension-template/tree/main/python"
+
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+# Make sure to copy any changes to the root `pyproject.toml` config too.
+module-name = "tket_extension_template._bindings"
+python-source = "src/"
+manifest-path = "Cargo.toml"
+# "extension-module" tells pyo3 to skip linking against libpython.so
+features = ["pyo3/extension-module"]
+# custom profile with extra optimisations
+profile = "release-py"
+
+[tool.pyright]
+# Rust bindings have typing stubs but no python source code.
+reportMissingModuleSource = "none"

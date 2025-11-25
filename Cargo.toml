@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = ["rust", "python"]
+
+[workspace.package]
+# Common settings for all packages in the workspace
+rust-version = "1.88"
+edition = "2024"
+homepage = "https://github.com/CQCL/tket-extension-template"
+repository = "https://github.com/CQCL/tket-extension-template"
+license = "Apache-2.0"
+
+[workspace.lints.rust]
+missing_docs = "warn"
+
+[workspace.dependencies]
+derive_more = "2.0.1"
+itertools = "0.14.0"
+pyo3 = "0.27.1"
+tket = "0.16.0"
+
+# The profile that the python wheels will build with
+[profile.release-py]
+inherits = "release"
+lto = "fat"
+strip = "symbols"
+panic = "abort"
