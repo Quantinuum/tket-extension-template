@@ -71,7 +71,7 @@ jobs:
       - name: Install cargo-codspeed
         run: cargo binstall cargo-codspeed --force
       - name: Override criterion with the CodSpeed harness
-        run: cargo add --dev codspeed-criterion-compat --rename criterion --package hugr
+        run: cargo add --dev codspeed-criterion-compat --rename criterion --package tket-extension-template
       - name: Build benchmarks
         run: cargo codspeed build --profile bench --features declarative,llvm,llvm-test
       - name: Run benchmarks and upload results to CodSpeed
@@ -157,8 +157,8 @@ jobs:
         # Add new dependencies as needed if the check fails due to
         # "package `XXX` cannot be built because it requires rustc YYY or newer, while the currently active rustc version is 1.88.0"
         run: |
-          # rm Cargo.lock
-          # cargo add -p tket-extension-template half@2.4.1
+          rm Cargo.lock
+          cargo add -p tket-extension-template smol_str@0.3.3
       - name: Build with no features
         run: cargo minimal-versions --direct test --verbose  --no-default-features --no-run
       - name: Tests with no features
