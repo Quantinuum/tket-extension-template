@@ -7,8 +7,8 @@ default-members = ["rust"]
 # Common settings for all packages in the workspace
 rust-version = "1.88"
 edition = "2024"
-homepage = "https://github.com/CQCL/tket-extension-template"
-repository = "https://github.com/CQCL/tket-extension-template"
+homepage = "https://github.com/Quantinuum/tket-extension-template"
+repository = "https://github.com/Quantinuum/tket-extension-template"
 license = "Apache-2.0"
 
 [workspace.lints.rust]

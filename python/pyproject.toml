@@ -29,8 +29,8 @@ classifiers = [
 dependencies = ["hugr~=0.14.3", "tket~=0.12.12"]
 
 [project.urls]
-homepage = "https://github.com/CQCL/tket-extension-template/tree/main/python"
-repository = "https://github.com/CQCL/tket-extension-template/tree/main/python"
+homepage = "https://github.com/Quantinuum/tket-extension-template/tree/main/python"
+repository = "https://github.com/Quantinuum/tket-extension-template/tree/main/python"
 
 [build-system]
 requires = ["maturin>=1.4,<2.0"]

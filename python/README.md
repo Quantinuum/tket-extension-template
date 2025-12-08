@@ -1,7 +1,7 @@
 tket-extension-template
 ===============
 
-[![codecov][]](https://codecov.io/gh/CQCL/tket-extension-template)
+[![codecov][]](https://codecov.io/gh/Quantinuum/tket-extension-template)
 
 This README appears in the landing page of the package on PyPI.
 
@@ -28,6 +28,6 @@ version will only change on major releases.
 
 This project is licensed under Apache License, Version 2.0 ([LICENSE][] or http://www.apache.org/licenses/LICENSE-2.0).
 
-  [codecov]: https://img.shields.io/codecov/c/gh/CQCL/tket-extension-template?logo=codecov
-  [LICENSE]: https://github.com/CQCL/tket-extension-template/blob/main/LICENCE
-  [CHANGELOG]: https://github.com/CQCL/tket-extension-template/blob/main/python/CHANGELOG.md
+  [codecov]: https://img.shields.io/codecov/c/gh/Quantinuum/tket-extension-template?logo=codecov
+  [LICENSE]: https://github.com/Quantinuum/tket-extension-template/blob/main/LICENCE
+  [CHANGELOG]: https://github.com/Quantinuum/tket-extension-template/blob/main/python/CHANGELOG.md

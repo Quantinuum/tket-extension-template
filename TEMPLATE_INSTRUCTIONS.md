@@ -104,4 +104,4 @@ the python environment and setup the pre-commit hooks.
 You can check that your extension is working at each step by running `just
 test`.
 
-Check [DEVELOPMENT.md](https://github.com/CQCL/tket-extension-template/blob/main/DEVELOPMENT.md) for more details on working with the repository.
+Check [DEVELOPMENT.md](https://github.com/Quantinuum/tket-extension-template/blob/main/DEVELOPMENT.md) for more details on working with the repository.
