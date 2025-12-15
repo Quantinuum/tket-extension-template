@@ -128,7 +128,7 @@ jobs:
           working-directory: ${{ env.MODULE_DIR }}
 
       - name: Upload wheels
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: wheels-linux-${{ matrix.platform.target }}
           path: dist
@@ -160,7 +160,7 @@ jobs:
           args: --out ../dist
           working-directory: ${{ env.MODULE_DIR }}
       - name: Upload sdist
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: wheels-sdist
           path: dist
