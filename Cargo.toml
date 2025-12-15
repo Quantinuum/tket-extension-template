@@ -15,7 +15,7 @@ license = "Apache-2.0"
 missing_docs = "warn"
 
 [workspace.dependencies]
-derive_more = "2.0.1"
+derive_more = "2.1.0"
 itertools = "0.14.0"
 pyo3 = "0.27.2"
 tket = "0.16.0"
