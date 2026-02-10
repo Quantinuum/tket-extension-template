@@ -12,8 +12,8 @@ use tket::hugr::HugrView;
 use tket::hugr::envelope::{EnvelopeFormat, ZstdConfig};
 use tket::serialize::EnvelopeConfig;
 
-/// A rust-backed Hugr.
-#[pyclass]
+/// A python object backed by rust `Hugr`.
+#[pyclass(from_py_object)]
 #[derive(Clone, Debug, PartialEq, derive_more::From)]
 pub struct RsHugr {
     /// Rust representation of the hugr.

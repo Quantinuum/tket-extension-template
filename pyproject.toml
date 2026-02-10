@@ -8,9 +8,9 @@ dev-dependencies = [
     "pre-commit ~=4.5",
     "pytest ~=9.0",
     "pytest-cov ~=7.0",
-    "maturin ~=1.10",
-    "mypy ~=1.18",
-    "ruff ~=0.14.6",
+    "maturin ~=1.11",
+    "mypy ~=1.19",
+    "ruff ~=0.15.0",
     "toml ~=0.10.2",
 ]
 
