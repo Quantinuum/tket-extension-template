@@ -1,6 +1,6 @@
 name: 🦀 Rust Semver Checks
 on:
-  pull_request_target:
+  pull_request:
     branches:
       - "**"
 
@@ -23,6 +23,8 @@ jobs:
   rs-semver-checks:
     needs: [changes]
     if: ${{ needs.changes.outputs.rust == 'true' }}
+    permissions:
+      pull-requests: write
     uses: Quantinuum/hugrverse-actions/.github/workflows/rs-semver-checks.yml@main
     secrets:
-      GITHUB_PAT: ${{ secrets.HUGRBOT_PAT }}
+      GITHUB_PAT: ${{ secrets.HUGRBOT_PAT || github.token }}
