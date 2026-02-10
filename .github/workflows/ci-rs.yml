@@ -18,7 +18,7 @@ env:
   SCCACHE_GHA_ENABLED: "true"
   RUSTC_WRAPPER: "sccache"
   # Minimal supported Rust version
-  MSRV: "1.88"
+  MSRV: "1.89"
 
 jobs:
   # Check if changes were made to the relevant files.
@@ -155,10 +155,10 @@ jobs:
           cargo binstall cargo-minimal-versions --force
       - name: Pin transitive dependencies not compatible with our MSRV
         # Add new dependencies as needed if the check fails due to
-        # "package `XXX` cannot be built because it requires rustc YYY or newer, while the currently active rustc version is 1.88.0"
+        # "package `XXX` cannot be built because it requires rustc YYY or newer, while the currently active rustc version is 1.89.0"
         run: |
           rm Cargo.lock
-          cargo add -p tket-extension-template smol_str@0.3.2
+          # cargo add -p tket-extension-template smol_str@0.3.5
       - name: Build with no features
         run: cargo minimal-versions --direct test --verbose  --no-default-features --no-run
       - name: Tests with no features

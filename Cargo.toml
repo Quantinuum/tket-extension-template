@@ -5,7 +5,7 @@ default-members = ["rust"]
 
 [workspace.package]
 # Common settings for all packages in the workspace
-rust-version = "1.88"
+rust-version = "1.89"
 edition = "2024"
 homepage = "https://github.com/Quantinuum/tket-extension-template"
 repository = "https://github.com/Quantinuum/tket-extension-template"
