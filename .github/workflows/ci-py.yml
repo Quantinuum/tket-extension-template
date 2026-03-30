@@ -96,7 +96,7 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN || '' }}
         if: ${{ env.CODECOV_TOKEN != '' }} && github.event_name != 'merge_group' && matrix.python-version.coverage
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v6
         with:
           files: coverage.xml
           name: python
